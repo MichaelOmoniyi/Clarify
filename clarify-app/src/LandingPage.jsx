@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 export default class LandingPage extends Component {
@@ -8,7 +9,7 @@ export default class LandingPage extends Component {
         <div className="content">
           <h1>Welcome to Clarify</h1>
           <p>Guiding your career journey...</p>
-          <button className="btn btn-primary">Get Started</button>
+          <Link to="/signup" className="btn btn-primary">Get Started</Link>
         </div>
       </div>
     );
