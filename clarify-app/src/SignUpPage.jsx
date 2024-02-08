@@ -7,7 +7,7 @@ export default class SignUp extends Component {
   render() {
     return (
       <div className="signUpContainer">
-        <div className="content">
+        <div className="signUpContent">
           <h3>WELCOME TO CLARIFY</h3>
           <p>Create an Account</p>
           <form action="" method="post">
