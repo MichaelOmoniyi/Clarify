@@ -52,3 +52,10 @@
     border-bottom: solid #363d7c;
     border-radius: calc(2px + 1vmin);
 }
+
+@media (min-width: 991px) {
+    .nav-dropdown
+    {
+        border: none;
+    }
+}
