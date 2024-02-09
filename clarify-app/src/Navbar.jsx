@@ -14,7 +14,7 @@ export class NavBarNew extends Component {
               Clarify
             </a>
             <button
-              class="navbar-toggler"
+              class="navbar-toggler dropdown-button"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"

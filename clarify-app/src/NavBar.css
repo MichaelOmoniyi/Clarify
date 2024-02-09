@@ -31,6 +31,12 @@
   color: #fdf9f9 !important;
 }
 
+.dropdown-button
+{
+    color: #fdf9f9 !important;
+    background-color: #fdf9f9 !important;
+}
+
 .nav-dropdown
 {
     /* background-color: #fdf9f9; */
