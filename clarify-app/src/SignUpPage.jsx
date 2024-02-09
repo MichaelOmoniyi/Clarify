@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GoogleIcon from "./assets/google.png";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./SignUp.css"
@@ -17,9 +18,9 @@ export default class SignUp extends Component {
             <input type="password" placeholder="Confirm Password" />
             <input type="submit" />
           </form>
-          <p>or</p>
+          <p className="option">or</p>
           <button>
-            <img src="./assets/icons8-google-48.png" alt="Google Icon" />
+            <img className="googleIcon" src={GoogleIcon} alt="Google Icon" />
             Sign Up with Google
           </button>
           <a href="#">Already have an account?</a>

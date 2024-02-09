@@ -6,7 +6,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import { NavBarNew } from "./Navbar";
+import { NavBarUser } from "./Navbar";
 import LandingPage from "./LandingPage";
 import SignUp from "./SignUpPage";
 
@@ -32,7 +32,7 @@ export class App extends Component {
       return null;
     }
 
-    return <NavBarNew />;
+    return <NavBarUser />;
   };
 }
 

@@ -44,6 +44,7 @@
     margin-top: 10px;
     justify-content: center;
     text-align: center;
+    border-radius: calc(10px + 1vmin);
 }
 
 .nav-dropdown a
@@ -55,13 +56,29 @@
 
 .nav-dropdown a:hover
 {
-    border-bottom: solid #363d7c;
-    border-radius: calc(2px + 1vmin);
+    border-bottom: solid #363d7c !important;
+    border-radius: calc(2px + 1vmin) !important;
+}
+
+.nav-profileImg
+{
+    width: calc(60px + 1vmin);
+}
+
+.profileImg
+{
+    display: none;
 }
 
 @media (min-width: 991px) {
     .nav-dropdown
     {
         border: none;
+    }
+
+    .profileImg
+    {
+        display: block;
+        width: calc(60px + 1vmin);
     }
 }
