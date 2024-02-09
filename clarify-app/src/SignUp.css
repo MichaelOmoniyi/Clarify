@@ -9,21 +9,28 @@
 {
     width: 100%;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     padding-inline: calc(15px + 1vmin);
-    padding-block: calc(5px + 1vmin);
+    /* padding-block: calc(5px + 1vmin); */
     scrollbar-width: thin;
+}
+
+.subContainer
+{
+    height: 100%;
+    display: flex;
+    padding-block: calc(5px + 1vmin);
 }
 
 .signUpContent
 {
-    overflow: hidden;
-    overflow-y: auto;
+    /* overflow: hidden;
+    overflow-y: auto; */
     height: auto;
     display: flex;
     flex-direction: column;
