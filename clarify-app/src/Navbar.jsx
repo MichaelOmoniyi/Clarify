@@ -5,55 +5,70 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.css";
 
 export class NavBarNew extends Component {
-  state = {
-    user: [{ profileImg: { profileImage } }],
-  };
-
   render() {
     return (
       <div className="NavBar_Container">
-        <div className="NavBar">
-          <div className="navHeaderLinks">
-            <h2>Clarify</h2>
-            <div className="navLinks">
-              <a href="#" className="profile">
-                Profile
-              </a>
-              <a href="#">Home</a>
-              <a href="#">Mentors</a>
-              <a href="#">Chat</a>
-              <a href="#">Sign In</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand navbar-header" href="#">
+              Clarify
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-dropdown" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    Mentors
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    Chat
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">
+                    Sign In
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <FontAwesomeIcon className="hamburger" icon={faBars} onClick={this.openCloseNavBar} />
-        </div>
-        <div className="nav-dropdown">
-          <a className="profile">Profile</a>
-          <a href="#">Home</a>
-          <a href="#">Mentors</a>
-          <a href="#">Chat</a>
-          <a href="#">Sign In</a>
-        </div>
+        </nav>
       </div>
     );
   }
 
-  openCloseNavBar = () => {
-    let dropDown = document.querySelector(".nav-dropdown");
-    if (dropDown.style.display === "none") {
-      dropDown.style.display = "flex";
-    } else {
-      dropDown.style.display = "none";
-    }
+  toggleDropdown = () => {
+    this.setState((prevState) => ({
+      isDropdownVisible: !prevState.isDropdownVisible,
+    }));
   };
 }
 
 export class NavBarUser extends Component {
   state = {
-    user: [{ profileImg: { profileImage } }],
+    isDropdownVisible: false,
   };
 
   render() {
+    const { isDropdownVisible } = this.state;
+
     return (
       <div className="NavBar_Container">
         <div className="NavBar">
@@ -68,30 +83,25 @@ export class NavBarUser extends Component {
               <a href="#">Chat</a>
             </div>
           </div>
-          <img
-            src={profileImage}
-            onClick={this.openCloseNavBar}
-            alt="Profile"
-          />
+          <img src={profileImage} onClick={this.toggleDropdown} alt="Profile" />
         </div>
-        <div className="nav-dropdown">
-          <a href="#" className="profile">
-            Profile
-          </a>
-          <a href="#">Home</a>
-          <a href="#">Mentors</a>
-          <a href="#">Chat</a>
-        </div>
+        {isDropdownVisible && (
+          <div className="nav-dropdown">
+            <a href="#" className="profile">
+              Profile
+            </a>
+            <a href="#">Home</a>
+            <a href="#">Mentors</a>
+            <a href="#">Chat</a>
+          </div>
+        )}
       </div>
     );
   }
 
-  openCloseNavBar = () => {
-    let dropDown = document.querySelector(".nav-dropdown");
-    if (dropDown.style.display === "none") {
-      dropDown.style.display = "flex";
-    } else {
-      dropDown.style.display = "none";
-    }
+  toggleDropdown = () => {
+    this.setState((prevState) => ({
+      isDropdownVisible: !prevState.isDropdownVisible,
+    }));
   };
 }

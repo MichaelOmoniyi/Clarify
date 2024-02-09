@@ -15,13 +15,13 @@
     background-repeat: no-repeat;
     background-color: #363d7c;
     background-position: center;
-    /* padding: calc(30px + 2vmin); */
+    padding: calc(20px + 2vmin);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: calc(20px + 1vmin);
+    font-size: calc(18px + 1vmin);
 }
 
 .content
@@ -32,9 +32,17 @@
     justify-content: center;
     align-items: center;
     color: #fdf9f9;
+    display: flex;
+    flex-direction: column;
+    gap: calc(5px + 1vmin);
 }
 
 .content h1
 {
     font-size: calc(60px + 1vmin);
+}
+
+.content p
+{
+    margin-bottom: calc(10px + 1vmax);
 }
