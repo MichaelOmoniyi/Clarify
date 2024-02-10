@@ -71,10 +71,15 @@
     border-radius: calc(10px + 1vmin);
 }
 
-.signUpContent input:last-of-type
+.submitForm input
 {
+    width: 100%;
     background-color: #363d7c;
     color: #fdf9f9;
+    padding: calc(5px + 1vmin);
+    font-size: calc(16px + 1vmin);
+    border: solid 1px rgb(117, 117, 117);
+    border-radius: calc(10px + 1vmin);
 }
 
 .signUpContent input:focus
@@ -83,14 +88,21 @@
     outline: none;
 }
 
-.signUpContent input:last-of-type:hover
+.submitForm input:hover
 {
     background-color: #424ca8;
 }
 
-.signUpContent .option
+.validation
 {
-    margin-block: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.validation p
+{
+    color: red;
+    display: none;
 }
 
 .signUpContent button
