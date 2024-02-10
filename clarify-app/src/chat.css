@@ -1,0 +1,74 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.chatArea
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf9f9;
+    justify-content: center;
+    align-items: baseline;
+    padding-block: 10px;
+    padding-inline: 15px;
+}
+
+.sendResponse
+{
+    width: 100%;
+    height: 100%;
+}
+
+.prompt
+{
+    width: 100%;
+    border: solid 1px rgb(117, 117, 117);
+    border-radius: calc(10px + 1vmin);
+    padding: calc(1px + 1vmin);
+}
+
+.prompt .promptForm
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promptForm input
+{
+    padding: calc(2px + 1vmin);
+    border: none;
+    outline: none;
+    font-size: calc(16px + 1vmin);
+    border-radius: calc(7px + 1vmin);
+    min-width: 87%;
+}
+
+
+.prompt button
+{
+    width: calc(20% + 1vmin);
+    background-color: #363d7c;
+    padding: calc(2px + 1vmin);
+    border: none;
+    font-size: calc(20px + 1vmin);
+    border-radius: calc(5px + 1vmin);
+    color: #fdf9f9;
+}
+
+.prompt button:hover
+{
+    opacity: 0.7;
+}
+
+@media (min-width: 991px) {
+    .chatArea {
+        padding-inline: calc(200px + 1vmin);
+    }
+}
