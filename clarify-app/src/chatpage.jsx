@@ -1,7 +1,11 @@
-import React, { Component } from "react";
+import { Component, useState } from "react";
+import { Configuration, OpenAIApi } from "openai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./chat.css";
+
+
+//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
 
 export default class Chat extends Component {
   render() {
