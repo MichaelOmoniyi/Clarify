@@ -1,63 +1,100 @@
-import React from 'react';
-import { useState } from "react";
-import { OpenAI } from "openai";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import "./Chat.css";
+import React, { useState } from 'react';
+import { OpenAI } from 'openai';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import './Chat.css';
+
+//import 'dotenv/config';
 
 const Chat = () => {
-   // const { logOut, user } = UserAuth();
+  const openai = new OpenAI({
+    apiKey: "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",
+    dangerouslyAllowBrowser: true,
+  });
 
-   // const handleSignOut = async () => {
-   //    try {
-   //       await logOut();
-   //    } catch (error) {
-   //       console.log(error);
-   //    }
-   // };
+  //console.log(process.env.OPENAI_API_KEY);
 
+  const [message, setMessage] = useState('');
+  const [chats, setChats] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
 
-   
+  const chat = async (e) => {
+    e.preventDefault();
 
-   
-const openai = new OpenAI({
-   apiKey: "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",
-   dangerouslyAllowBrowser: true
-});
+    if (!message) return;
 
-   const [message, setMessage] = useState("");
-   const [chats, setChats] = useState([]);
-   const [isTyping, setIsTyping] = useState(false);
+    setIsTyping(true);
 
-   return (
-      <div className="chatContainer">
-         <div className="chatArea">
+    let msgs = [...chats];
+    msgs.push({ role: 'user', content: message });
+    setChats(msgs);
 
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+    setMessage('');
 
-            <div className="sendResponse">
-               <div className="response">ll</div>
-               <div className="send">jj</div>
-            </div>
+    try {
+      const res = await openai.chat.completions.create({
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: 'You are Clarify. The Clarify app is a web-based AI-enabled Chat App that assists its users in making informed and guided decisions on career paths. You have to approach every chat with the aproach to help make a career decision. Speak and think intelligently.' },
+          ...msgs,
+        ],
+      });
 
+      console.log(res.data);
 
-            <div className="prompt">
-               <form action="#" method="post" className="promptForm">
-                  <input type="text" placeholder="Enter prompt..." />
-                  <button type="submit">
-                     <FontAwesomeIcon className="upArrow" icon={faArrowUp} />
-                  </button>
-               </form>
-            </div>
+      msgs.push({
+         role: 'assistant',
+         content: res.choices[0].message.content
+      });
+      setChats(msgs);
+    } catch (error) {
+      console.log(error);
+      alert(error);
+    }
 
-         </div>
+    setIsTyping(false);
+  };
+
+  return (
+    <div className="chatContainer">
+      <div className="chatArea">
+        <section>
+          {chats && chats.length
+            ? chats.map((chat, index) => (
+                <p key={index} className={chat.role === 'user' ? 'user_msg' : ''}>
+                  <span>
+                    <b>{chat.role.toUpperCase()}</b>
+                  </span>
+                  <span>:</span>
+                  <span>{chat.content}</span>
+                </p>
+              ))
+            : ''}
+        </section>
+
+        <div className={isTyping ? '' : 'hide'}>
+          <p>
+            <i>{isTyping ? 'Typing' : ''}</i>
+          </p>
+        </div>
+
+        <div className="prompt">
+          <form action="" className="promptForm" onSubmit={(e) => chat(e)}>
+            <input
+              type="text"
+              name="message"
+              value={message}
+              placeholder="Enter prompt..."
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <button type="submit">
+              <FontAwesomeIcon className="upArrow" icon={faArrowUp} />
+            </button>
+          </form>
+        </div>
       </div>
-   );
+    </div>
+  );
 };
 
 export default Chat;
