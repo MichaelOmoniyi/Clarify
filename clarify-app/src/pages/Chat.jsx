@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import { Configuration, OpenAIApi } from "openai";
-const OpenAI = require("openai");
+import { OpenAI } from "openai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import "./Chat.css";
@@ -17,9 +16,13 @@ const Chat = () => {
    //    }
    // };
 
+
+   
+
    
 const openai = new OpenAI({
-   apiKey: process.env.OPENAI_API_KEY,
+   apiKey: "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",
+   dangerouslyAllowBrowser: true
 });
 
    const [message, setMessage] = useState("");
@@ -29,12 +32,14 @@ const openai = new OpenAI({
    return (
       <div className="chatContainer">
          <div className="chatArea">
+
             <br />
             <br />
             <br />
             <br />
             <br />
             <br />
+
             <div className="sendResponse">
                <div className="response">ll</div>
                <div className="send">jj</div>
@@ -49,6 +54,7 @@ const openai = new OpenAI({
                   </button>
                </form>
             </div>
+
          </div>
       </div>
    );
