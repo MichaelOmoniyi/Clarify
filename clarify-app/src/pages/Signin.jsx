@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import "./SignUp.css";
 
 const Signin = () => {
   const { googleSignIn, user } = UserAuth();
@@ -22,10 +23,41 @@ const Signin = () => {
   }, [user]);
 
   return (
-    <div>
-      {/* <h1 className='text-center text-3xl font-bold py-8'>Sign - in</h1> */}
-      <div className='max-w-[240px] m-auto py-4'>
-        <GoogleButton onClick={handleGoogleSignIn} />
+    <div className="signUpContainer">
+      <div className="subContainer">
+        <div className="signUpContent">
+          <h3>WELCOME TO CLARIFY</h3>
+          <p>Create an Account</p>
+          <form action="" method="get">
+            <input id="email" type="email" placeholder="Email" />
+            <input id="userName" type="text" placeholder="Username" />
+            <input id="password" type="password" placeholder="Password" />
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <div className="validation">
+              <p className="password">Passwords do not match</p>
+              <p className="email">Invalid email</p>
+              <p className="username">Invalid username</p>
+            </div>
+            <Link
+              // to={this.state.dynamicPath}
+              className="submitForm"
+              // onClick={this.validateForm}
+            >
+              <input type="submit" />
+            </Link>
+          </form>
+          <p className="option">or</p>
+          {/* <button>
+            <img className="googleIcon" src={GoogleIcon} alt="Google Icon" />
+            Sign Up with Google
+          </button> */}
+          <GoogleButton onClick={handleGoogleSignIn} />
+          <a href="#">Already have an account?</a>
+        </div>
       </div>
     </div>
   );

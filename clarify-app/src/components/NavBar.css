@@ -8,6 +8,7 @@
   font-size: calc(16px + 1vmin) !important;
   position: absolute;
   width: 100%;
+  margin-bottom:100px;
 }
 
 .NavBar_Container a
