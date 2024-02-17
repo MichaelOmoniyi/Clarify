@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { AuthContextProvider } from './context/AuthContext.js';
+import Navbar from './components/Navbar.jsx';
+import Protected from './components/Protected.js';
+import Account from './pages/Account.jsx';
+//import Home from './pages/Home.jsx';
+import Signin from './pages/Signin.jsx';
+import Chat from './pages/Chat.jsx';
 
-import { NavBarUser } from "./Navbar";
-import { NavBarNew } from "./Navbar";
-import LandingPage from "./LandingPage";
-import SignUp from "./SignUpPage";
-import Chat from "./chatpage";
+import LandingPage from "./pages/LandingPage";
+//import { NavBarUser } from "./pages/Navbar";
+//import { NavBarNew } from "./pages/Navbar";
+//import SignUp from "./pages/SignUpPage";
 
 const Title = () => {
   switch (window.location.pathname) {
@@ -19,6 +20,9 @@ const Title = () => {
       break;
     case "/signup":
       document.title = "Sign Up - Clarify";
+      break; 
+    case "/signin":
+      document.title = "Sign In - Clarify";
       break;
     case "/chat":
       document.title = "Chat - Clarify";
@@ -28,33 +32,48 @@ const Title = () => {
   }
 };
 
-const NavBarChecker = () => {
-  const navigate = useNavigate();
-  const currentPath = window.location.pathname;
+// const NavBarChecker = () => {
+//   const currentPath = window.location.pathname;
 
-  if (currentPath === "/signup") {
-    return null;
-  } else if (currentPath === "/chat") {
-    return <NavBarUser />;
-  }
+//   if (currentPath === "/signin") {
+//     return null;
+//   } else if (currentPath === "/chat") {
+//     return <NavBarUser />;
+//   }
 
-  return <NavBarNew />;
-};
+//   return <NavBarNew />;
+// };
 
-export class App extends Component {
-  render() {
-    return (
-      <Router>
-        <React.Fragment>
-          <Title />
-          <NavBarChecker />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/chat" element={<Chat />} />
-          </Routes>
-        </React.Fragment>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <AuthContextProvider>
+
+        <Title />
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route
+            path='/account'
+            element={
+              <Protected>
+                <Account />
+              </Protected>
+            }
+          />
+          <Route
+            path='/chat'
+            element={
+              <Protected>
+                <Chat />
+              </Protected>
+            }
+          />
+        </Routes>
+      </AuthContextProvider>
+    </div>
+  );
 }
+
+export default App;
