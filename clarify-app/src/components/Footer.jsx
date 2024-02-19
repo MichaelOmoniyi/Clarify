@@ -14,7 +14,7 @@ export default class Footer extends Component {
                             <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
                             <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">About</a></li>
                         </ul>
-                        <p className="text-center text-body-secondary">© 2023 Company, Inc</p>
+                        <p className="text-center text-body-secondary">© 2024 Clarify, Inc</p>
                     </footer>
                 </div>
             </React.Fragment>
