@@ -3,6 +3,7 @@ import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import "./Signup.css";
+import Footer from '../components/Footer';
 
 const Signup = () => {
   const { googleSignIn, user } = UserAuth();
@@ -23,6 +24,7 @@ const Signup = () => {
   }, [user]);
 
   return (
+    <>
     <div className="signUpContainer">
       <div className="subContainer">
         <div className="signUpContent">
@@ -56,11 +58,13 @@ const Signup = () => {
             Sign Up with Google
           </button> */}
           <GoogleButton onClick={handleGoogleSignIn} />
-          <a href="#">Already have an account? Sign In</a>
+          <a href="#">Already have an account?</a>
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
-};
+}
 
 export default Signup;
