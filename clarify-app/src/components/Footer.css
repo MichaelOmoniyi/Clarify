@@ -8,3 +8,8 @@
 .footercontain{
     width: 100%;
 }
+
+
+.footer-text{
+    color: rgb(13, 110, 253) !important;
+}

@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.jsx';
 import Protected from './components/Protected.js';
 import Account from './pages/Account.jsx';
 //import Home from './pages/Home.jsx';
-import Signin from './pages/Signin.jsx';
+import Signup from './pages/Signup.jsx';
 import Chat from './pages/Chat.jsx';
 
 import LandingPage from "./pages/LandingPage";
@@ -27,6 +27,9 @@ const Title = () => {
       break;
     case "/chat":
       document.title = "Chat - Clarify";
+      break;
+    case "/about":
+      document.title = "About - Clarify";
       break;
     default:
       document.title = "Clarify";
@@ -54,7 +57,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<LandingPage />} />
-          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
           <Route
             path='/account'
             element={

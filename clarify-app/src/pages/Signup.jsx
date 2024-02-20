@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import "./SignUp.css";
+import "./Signup.css";
 
-const Signin = () => {
+const Signup = () => {
   const { googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
 
@@ -56,11 +56,11 @@ const Signin = () => {
             Sign Up with Google
           </button> */}
           <GoogleButton onClick={handleGoogleSignIn} />
-          <a href="#">Already have an account?</a>
+          <a href="#">Already have an account? Sign In</a>
         </div>
       </div>
     </div>
   );
 };
 
-export default Signin;
+export default Signup;
