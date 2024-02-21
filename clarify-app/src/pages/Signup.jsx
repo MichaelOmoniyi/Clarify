@@ -55,7 +55,7 @@ const Signin = () => {
             <img className="googleIcon" src={GoogleIcon} alt="Google Icon" />
             Sign Up with Google
           </button> */}
-          <GoogleButton onClick={handleGoogleSignIn} />
+          <GoogleButton className="GoogleSignin" onClick={handleGoogleSignIn} />
           <a href="#">Already have an account?</a>
         </div>
       </div>

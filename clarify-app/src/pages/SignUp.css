@@ -13,15 +13,13 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-inline: calc(15px + 1vmin);
-  /* padding-block: calc(5px + 1vmin); */
+  padding-inline: calc(30px + 1vmax);
+  padding-bottom: calc(10px + 1vmin);
   scrollbar-width: thin;
 }
 
 .subContainer {
-  height: 100%;
-  display: flex;
-  padding-block: calc(5px + 1vmin);
+  margin-top: calc(225px + 1vmin);
 }
 
 .signUpContent {
@@ -92,7 +90,7 @@
   display: none;
 }
 
-.signUpContent button {
+/* .signUpContent button {
   padding: calc(5px + 1vmin);
   font-size: calc(15px + 1vmin);
   border: solid 1px rgb(117, 117, 117);
@@ -110,6 +108,13 @@
 
 .googleIcon {
   width: calc(25px + 1vmin);
+} */
+
+.GoogleSignin
+{
+  /* width: 100% !important; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .signUpContent a {
@@ -118,8 +123,18 @@
   color: #363d7c;
 }
 
+.signUpContent a:hover
+{
+  text-shadow: 0.5px 0.5px 10px #424ca8;
+}
+
 @media (min-width: 991px) {
   .signUpContainer {
     padding-inline: calc(400px + 1vmin);
+    padding-bottom: 25px;
+  }
+
+  .subContainer {
+    margin-top: calc(300px + 1vmax);
   }
 }
