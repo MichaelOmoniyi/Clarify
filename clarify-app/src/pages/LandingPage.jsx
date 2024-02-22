@@ -12,7 +12,7 @@ export default class LandingPage extends Component {
             <div className="content">
               <h1>Welcome to Clarify</h1>
               <p>Guiding your career journey...</p>
-              <Link to="/signin" className="btn btn-primary">Get Started</Link>
+              <Link to="/signup" className="btn btn-primary">Get Started</Link>
             </div>
           </div>
           <div className="subcontent">
