@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import "./Signup.css";
+import "./SignUp.css";
 import Footer from '../components/Footer';
 
 const Signup = () => {
