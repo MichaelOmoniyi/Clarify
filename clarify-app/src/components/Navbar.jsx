@@ -64,7 +64,7 @@ const Navbar = () => {
                         {user?.displayName ? (
                            <button className="nav-link active" onClick={handleSignOut}>Logout</button>
                         ) : (
-                           <Link to='/signup'>Sign Up</Link>
+                           <Link to='/signin'>Sign In</Link>
                         )}
                      </li>
                      <li className="nav-item">
