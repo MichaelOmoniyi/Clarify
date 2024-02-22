@@ -17,7 +17,7 @@ const Navbar = () => {
 
    return (
       <div className="NavBar_Container">
-         <nav className="navbar navbar-expand-lg bg-body-tertiary">
+         <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
 
                <Link
@@ -64,8 +64,15 @@ const Navbar = () => {
                         {user?.displayName ? (
                            <button className="nav-link active" onClick={handleSignOut}>Logout</button>
                         ) : (
-                           <Link to='/signin'>Sign in</Link>
+                           <Link to='/signup'>Sign Up</Link>
                         )}
+                     </li>
+                     <li className="nav-item">
+                        <Link
+                           to="/about"
+                           className="nav-link active" aria-current="page">
+                           About
+                        </Link>
                      </li>
                   </ul>
                </div>

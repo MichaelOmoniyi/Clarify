@@ -9,6 +9,7 @@ import Signup from './pages/Signup.jsx';
 import Chat from './pages/Chat.jsx';
 
 import LandingPage from "./pages/LandingPage";
+import About from './pages/About.jsx';
 //import { NavBarUser } from "./pages/Navbar";
 //import { NavBarNew } from "./pages/Navbar";
 //import SignUp from "./pages/SignUpPage";
@@ -20,12 +21,15 @@ const Title = () => {
       break;
     case "/signup":
       document.title = "Sign Up - Clarify";
-      break; 
+      break;
     case "/signin":
       document.title = "Sign In - Clarify";
       break;
     case "/chat":
       document.title = "Chat - Clarify";
+      break;
+    case "/about":
+      document.title = "About - Clarify";
       break;
     default:
       document.title = "Clarify";
@@ -70,6 +74,7 @@ function App() {
               </Protected>
             }
           />
+          <Route path='/about' element={<About />} />
         </Routes>
       </AuthContextProvider>
     </div>

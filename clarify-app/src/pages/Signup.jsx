@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button';
 import { UserAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import "./SignUp.css";
+import "./Signup.css";
+import Footer from '../components/Footer';
 
-const Signin = () => {
+const Signup = () => {
   const { googleSignIn, user } = UserAuth();
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const Signin = () => {
   }, [user]);
 
   return (
+    <>
     <div className="signUpContainer">
       <div className="subContainer">
         <div className="signUpContent">
@@ -60,7 +62,9 @@ const Signin = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
-};
+}
 
-export default Signin;
+export default Signup;
