@@ -133,8 +133,4 @@
     padding-inline: calc(400px + 1vmin);
     padding-bottom: 25px;
   }
-
-  .subContainer {
-    margin-top: calc(300px + 1vmax);
-  }
 }
