@@ -12,15 +12,22 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-inline: calc(30px + 1vmax);
-  padding-bottom: calc(10px + 1vmin);
+  padding-inline: calc(15px + 1vmin);
   scrollbar-width: thin;
   padding-top: 100px;
   background-color: #cfd6e0 !important;
 }
 
 .subContainer {
-  margin-top: calc(225px + 1vmin);
+  background-color: white;
+  height: auto;
+  display: flex;
+  box-shadow: 2px 2px 5px rgb(151, 150, 150);
+  border: solid z1px rgb(151, 150, 150);
+  border-radius: calc(10px + 1vmin);
+  padding: calc(20px + 1vmin);
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 .signUpContent {
