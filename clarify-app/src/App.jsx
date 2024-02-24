@@ -10,6 +10,7 @@ import Chat from './pages/Chat.jsx';
 
 import LandingPage from "./pages/LandingPage";
 import About from './pages/About.jsx';
+import Signin from './pages/Signin.jsx';
 //import { NavBarUser } from "./pages/Navbar";
 //import { NavBarNew } from "./pages/Navbar";
 //import SignUp from "./pages/SignUpPage";
@@ -58,6 +59,7 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/signin' element={<Signin />} />
           <Route
             path='/account'
             element={

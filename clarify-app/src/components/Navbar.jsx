@@ -69,6 +69,13 @@ const Navbar = () => {
                      </li>
                      <li className="nav-item">
                         <Link
+                           to="/signup"
+                           className="nav-link active" aria-current="page">
+                           Sign Up
+                        </Link>
+                     </li>
+                     <li className="nav-item">
+                        <Link
                            to="/about"
                            className="nav-link active" aria-current="page">
                            About
@@ -77,10 +84,10 @@ const Navbar = () => {
                   </ul>
                </div>
                {user?.displayName ? (
-                           <img className="profileImg" src={profileImage} alt="Profile" />
-                        ) : (
-                           ""
-                        )}
+                  <img className="profileImg" src={profileImage} alt="Profile" />
+               ) : (
+                  ""
+               )}
             </div>
          </nav>
       </div>
