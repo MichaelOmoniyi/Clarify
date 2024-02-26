@@ -8,7 +8,7 @@ import './Chat.css';
 
 const Chat = () => {
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
     dangerouslyAllowBrowser: true,
   });
 

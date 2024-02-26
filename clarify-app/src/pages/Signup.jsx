@@ -47,7 +47,7 @@ const Signup = () => {
             <Link
               // to={this.state.dynamicPath}
               className="submitForm"
-              // onClick={this.validateForm}
+              // onClick={this.validateForm}onClick={handleGoogleSignIn} 
             >
               <input type="submit" />
             </Link>
