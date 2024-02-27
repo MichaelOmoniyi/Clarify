@@ -213,6 +213,8 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   padding-inline: calc(20px + 2vmin);
   font-size: calc(20px + 1vmin);
+  justify-content: center;
+  text-align: center;
 }
 
 h3 {
@@ -275,9 +277,42 @@ h5 {
   font-size: calc(30px + 1vmin);
 }
 
+.repoLink
+{
+  text-decoration: none;
+}
+
+.repoLink button
+{
+  width: calc(250px + 1vmin);
+  background-color: #363d7c;
+  color: #cfd6e0;
+  border-color: #363d7c;
+  padding-inline: calc(15px + 1vmin);
+  padding-block: calc(10px + 1vmin);
+  border-radius: calc(10px + 1vmin);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.repoLink button:hover
+{
+  background-color: #424ca8;
+}
+
 @media (min-width: 767px) {
   .members {
     padding-inline: calc(60px + 1vmin);
+  }
+
+  .repoLink button
+  {
+    width: calc(300px + 1vmin);
   }
 }
 
