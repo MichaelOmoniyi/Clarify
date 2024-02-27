@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiamond } from "@fortawesome/free-solid-svg-icons";
+import { faDiamond, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedinIn,
@@ -189,6 +189,16 @@ export default class LandingPage extends Component {
                 </div>
               </div>
             </div>
+            <a
+              href="https://github.com/MichaelOmoniyi/Clarify"
+              target="_blank"
+              className="repoLink"
+            >
+              <button>
+                Check out Repo
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </a>
           </section>
 
           <Footer />
