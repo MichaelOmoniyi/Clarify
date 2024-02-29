@@ -14,22 +14,25 @@
   display: flex;
   flex-direction: column;
   /* background-color: #fdf9f9; */
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   padding-block: 10px;
+  /* padding-top: 200px; */
   padding-inline: 15px;
   overflow-y: hidden;
 }
 
-.sendResponse {
+.promptResponse {
   width: 100%;
-  height: 100%;
-  /* overflow-y: scroll; */
-  display: flex;
+  height: 85vh;
+  /* display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; */
+  overflow-y: auto;
   gap: 10px;
   padding-bottom: 5px;
+  padding-top: 100px;
+  scrollbar-width: thin;
 }
 
 .response,
@@ -40,16 +43,20 @@
   padding: calc(10px + 1vmin);
 }
 
-.response
-{
-    background-color: #D9D9D9;
-    color: #1C1B1B;
+.response {
+  background-color: #d9d9d9;
+  color: #1c1b1b;
 }
 
 .send {
   align-self: flex-end;
   background-color: #363d7c;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.promptContainer
+{
+  width: 100%;
 }
 
 .prompt {
@@ -57,6 +64,9 @@
   border: solid 1px rgb(117, 117, 117);
   border-radius: calc(10px + 1vmin);
   padding: calc(1px + 1vmin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .prompt .promptForm {
@@ -64,6 +74,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .promptForm input {
@@ -73,6 +84,7 @@
   font-size: calc(16px + 1vmin);
   border-radius: calc(7px + 1vmin);
   min-width: 87%;
+  height: 100%;
 }
 
 .prompt button {
@@ -90,7 +102,11 @@
 }
 
 @media (min-width: 991px) {
-  .chatArea {
+  .promptContainer {
+    padding-inline: calc(200px + 1vmin);
+  }
+  .promptResponse
+  {
     padding-inline: calc(200px + 1vmin);
   }
 }

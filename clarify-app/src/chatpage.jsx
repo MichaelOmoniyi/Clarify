@@ -16,8 +16,13 @@ export default class Chat extends Component {
     return (
       <div className="chatContainer">
         <div className="chatArea">
-          <div className="sendResponse">
-            <div className="response">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In voluptate quidem, iusto, dolorem error, omnis recusandae quasi commodi amet numquam eligendi perspiciatis. Neque, est quidem alias ad corporis in asperiores?</div>
+          <div className="promptResponse">
+            <div className="response">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
+              voluptate quidem, iusto, dolorem error, omnis recusandae quasi
+              commodi amet numquam eligendi perspiciatis. Neque, est quidem
+              alias ad corporis in asperiores?
+            </div>
             <div className="send"></div>
           </div>
           <div className="prompt">
