@@ -13,6 +13,12 @@ Welcome to Clarify! This application is designed to provide users with AI-driven
 **Author(s) LinkedIn:**
 - [ Michael Temiloluwa Omoniyi](https://www.linkedin.com/in/michael-omoniyi-1b2307232/)
 
+- [ Majaro Toheeb Abisoye](https://www.linkedin.com/in/toheeb-majaro)
+
+- [ E. Odinaka ](https://www.linkedin.com/in/toheeb-majaro)
+
+
+
 ## Installation
 To run this project locally, follow these steps:
 
