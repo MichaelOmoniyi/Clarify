@@ -23,11 +23,11 @@ const Account = () => {
       <br />
       <br />
       <div className='account-box'>
-        <h1 className='text-center text-2xl font-bold pt-12'>Account Details</h1>
-        <div>
+        <h1 className='text-center text-2xl font-bold pt-12 account-header'>Account Details</h1>
+        <div className='user-text'>
           <p>Welcome, {user?.displayName}</p>
         </div>
-        <button onClick={handleSignOut} className='border py-2 px-5 mt-10'>
+        <button onClick={handleSignOut} className='border py-2 px-5 mt-10 logout-btn btn btn-primary'>
           Logout
         </button>
       </div>

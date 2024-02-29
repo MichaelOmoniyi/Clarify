@@ -10,17 +10,42 @@ body {
     height: 100%;
 }
 
-.account-container{
+.account-container {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 150px;
 }
 
-.account-box{
+.account-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    height: 300px;
-    width: 250px;
+    height: auto;
+    width: auto;
+    padding: 30px;
+    box-shadow: 2px 2px 5px rgb(151, 150, 150);
+    border: solid 1px rgb(151, 150, 150);
+    border-radius: calc(10px + 1vmin);
+    padding: calc(20px + 1vmin);
+}
+
+.account-header{
+    margin-bottom: 20px;
+}
+
+.user-text{
+    text-align: center;
+    margin: auto;
+}
+
+.logout-btn{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
