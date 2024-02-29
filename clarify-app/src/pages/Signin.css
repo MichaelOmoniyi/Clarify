@@ -75,3 +75,10 @@ form input {
   border: solid 1px rgb(117, 117, 117);
   border-radius: calc(10px + 1vmin);
 }
+
+.GoogleSignin
+{
+  /* width: 100% !important; */
+  margin-left: auto;
+  margin-right: auto;
+}
